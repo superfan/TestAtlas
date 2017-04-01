@@ -34,7 +34,7 @@ atlas {
     atlasEnabled true
 
     tBuildConfig {
-        autoStartBundles = ['com.sh3h.mybundle'] //自启动bundle配置
+        autoStartBundles = ['com.taobao.firstbundle'] //自启动bundle配置
         //outOfApkBundles = ['remotebundle']
         //preLaunch = 'com.taobao.demo.DemoPreLaunch'
     }
@@ -71,7 +71,7 @@ dependencies {
     }
     compile 'com.taobao.android:atlasupdate:1.1.4.5@aar'
     compile 'com.alibaba:fastjson:1.1.45.android@jar'
-    compile project(':mybundle')
+    bundleCompile project(':mybundle')
 }
 
 String getEnvValue(key, defValue) {

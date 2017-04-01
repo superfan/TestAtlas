@@ -1,6 +1,18 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.taobao.atlas'
+
+atlas {
+    bundleConfig{
+        awbBundle true
+    }
+    buildTypes {
+        debug {
+            baseApFile project.rootProject.file('app/build/outputs/apk/app-debug.ap')
+        }
+    }
+}
 
 android {
     compileSdkVersion 25
